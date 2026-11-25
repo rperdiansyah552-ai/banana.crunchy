@@ -1,6 +1,6 @@
 // GANTI nomor berikut dengan nomor WhatsApp Business penjual.
  // Gunakan kode negara 62 tanpa tanda +, spasi, atau angka 0 di depan.
-const WHATSAPP_NUMBER = "6281234567890"; // CONTOH: ganti dengan nomor WhatsApp Business kamu
+const WHATSAPP_NUMBER = "6281535360775"; // CONTOH: ganti dengan nomor WhatsApp Business kamu
 
 const products = [
  {id:"original",name:"BANANA CRUNCH ORIGINAL",flavor:"Original (Asin)",price:12000,image:"assets/original.jpeg",description:"Keripik pisang rasa original dengan cita rasa gurih dan tekstur renyah. Pilihan sederhana untuk menemani waktu santai.",composition:"Pisang, minyak nabati, garam, dan bahan tambahan pangan sesuai resep produksi. Periksa dan tuliskan komposisi final sesuai bahan yang benar-benar digunakan.",benefits:"Dapat menjadi pilihan camilan saat bersantai atau berkumpul. Pisang merupakan bahan pangan sumber karbohidrat; nilai gizi produk akhir bergantung pada bahan dan proses pengolahannya."},
