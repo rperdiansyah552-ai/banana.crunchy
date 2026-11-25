@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4c842">
+  <meta name="description" content="BANANA CRUNCH - Keripik pisang aneka rasa oleh Kelompok 4 Pengantar Ilmu Pertanian.">
+  <title>BANANA CRUNCH | Toko Kelompok 4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#beranda" aria-label="Banana Crunch beranda">
+      <span class="brand-icon">🍌</span><span>BANANA<span class="brand-green">CRUNCH</span><small>TOKO KELOMPOK 4</small></span>
+    </a>
+    <nav>
+      <a href="#beranda">Beranda</a><a href="#produk">Produk Kami</a><a href="#tentang">Tentang Kami</a>
+    </nav>
+    <button class="cart-button" id="openCart" aria-label="Buka keranjang">🛒 <span>Keranjang</span><b id="cartCount">0</b></button>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <img src="assets/banner-banana-crunch.jpeg" alt="Banner Selamat Datang di Toko Banana Crunch">
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <span class="eyebrow">Camilan renyah, teman setiap suasana</span>
+        <h1>Yuk, ngemil seru<br><em>bareng Banana Crunch!</em></h1>
+        <p>Keripik pisang dengan sensasi aneka rasa. Pilih rasa favoritmu dan pesan dengan mudah.</p>
+        <a class="primary-btn" href="#produk">JELAJAHI PRODUK <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="intro section-wrap">
+      <span class="mini-label">SELAMAT DATANG DI TOKO KAMI</span>
+      <h2>Renyahnya bikin <span>happy!</span></h2>
+      <p>Temukan lima pilihan rasa BANANA CRUNCH. Setiap rasa tersedia sebagai produk tersendiri agar kamu lebih mudah memilih.</p>
+      <div class="feature-row">
+        <div><span>🍌</span><b>Berbahan dasar pisang</b><small>Camilan olahan pisang</small></div>
+        <div><span>✨</span><b>5 pilihan rasa</b><small>Pilih sesuai selera</small></div>
+        <div><span>📦</span><b>Kemasan 100 gram</b><small>Praktis untuk dinikmati</small></div>
+      </div>
+    </section>
+
+    <section class="products-section section-wrap" id="produk">
+      <div class="section-heading">
+        <div><span class="mini-label">PILIHAN CAMILANMU</span><h2>Produk <span>Kami</span></h2></div>
+        <p>Setiap rasa punya halaman detail, komposisi, manfaat, dan harga masing-masing.</p>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="about section-wrap" id="tentang">
+      <div class="about-mark">🍌</div>
+      <div><span class="mini-label">KENALAN DENGAN KAMI</span><h2>BANANA CRUNCH</h2>
+      <p>Marketplace sederhana untuk memperkenalkan dan memasarkan produk keripik pisang aneka rasa dari <strong>Kelompok 4 Pengantar Ilmu Pertanian</strong>.</p></div>
+    </section>
+  </main>
+
+  <footer><strong>BANANA CRUNCH</strong><span>Oleh Kelompok 4 Pengantar Ilmu Pertanian</span><small>© 2026 Banana Crunch. Terima kasih sudah berkunjung!</small></footer>
+
+  <div class="modal-backdrop" id="detailBackdrop">
+    <section class="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detailName">
+      <button class="close-btn" data-close="detailBackdrop" aria-label="Tutup">×</button>
+      <div class="detail-layout">
+        <img id="detailImage" src="" alt="">
+        <div class="detail-info">
+          <span class="mini-label">PRODUK BANANA CRUNCH</span>
+          <h2 id="detailName"></h2>
+          <div class="stars">★★★★★ <small>5.0</small></div>
+          <div class="detail-price" id="detailPrice"></div>
+          <p id="detailDescription"></p>
+          <div class="detail-block"><h3>Komposisi</h3><p id="detailComposition"></p></div>
+          <div class="detail-block"><h3>Informasi & manfaat</h3><p id="detailBenefits"></p></div>
+          <div class="detail-block"><h3>Berat bersih</h3><p>100 gram per kemasan.</p></div>
+          <div class="quantity-line"><label for="detailQty">Jumlah</label><div class="qty-control"><button id="detailMinus">−</button><input id="detailQty" type="number" min="1" value="1"><button id="detailPlus">+</button></div></div>
+          <button class="primary-btn full" id="detailAdd">TAMBAH KE KERANJANG</button>
+        </div>
+      </div>
+      <p class="disclaimer">Catatan: komposisi di halaman ini merupakan rancangan awal dan harus disesuaikan dengan bahan yang benar-benar digunakan dalam produksi.</p>
+    </section>
+  </div>
+
+  <div class="drawer-backdrop" id="cartBackdrop">
+    <aside class="cart-drawer" aria-label="Keranjang belanja">
+      <div class="drawer-head"><div><span class="mini-label">BELANJAANMU</span><h2>Keranjang</h2></div><button class="close-btn" data-close="cartBackdrop">×</button></div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-bottom"><div class="total-row"><span>Total belanja</span><strong id="cartTotal">Rp0</strong></div><button class="primary-btn full" id="goCheckout">LANJUT CHECKOUT →</button><small>Pesanan akan diteruskan ke WhatsApp Business.</small></div>
+    </aside>
+  </div>
+
+  <div class="modal-backdrop" id="checkoutBackdrop">
+    <section class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+      <button class="close-btn" data-close="checkoutBackdrop">×</button>
+      <span class="mini-label">SATU LANGKAH LAGI</span><h2 id="checkoutTitle">Data Pemesan</h2>
+      <p class="muted">Isi data berikut agar kelompok kami dapat menghubungi dan memproses pesananmu.</p>
+      <form id="checkoutForm">
+        <label>Nama lengkap<input name="name" required placeholder="Nama penerima"></label>
+        <label>Nomor HP / WhatsApp<input name="phone" required type="tel" placeholder="08xxxxxxxxxx"></label>
+        <label>Alamat lengkap<textarea name="address" required rows="3" placeholder="Jalan, nomor rumah, RT/RW, kelurahan, kecamatan, kota"></textarea></label>
+        <label>Catatan tambahan <small>(opsional)</small><textarea name="notes" rows="2" placeholder="Patokan rumah atau catatan pesanan"></textarea></label>
+        <div class="checkout-total"><span>Total pesanan</span><strong id="checkoutTotal">Rp0</strong></div>
+        <button class="primary-btn full" type="submit">KIRIM PESANAN VIA WHATSAPP</button>
+      </form>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
